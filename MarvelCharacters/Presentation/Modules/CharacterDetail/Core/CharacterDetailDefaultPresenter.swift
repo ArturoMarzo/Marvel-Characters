@@ -25,6 +25,7 @@ class CharacterDetailDefaultPresenter: CharacterDetailPresenter {
         retrieveCharacterData()
     }
     
+    // User selected a character from the list
     func retryButtonPressed() {
         view?.hideErrorMessage()
         view?.showHUD()
@@ -34,8 +35,9 @@ class CharacterDetailDefaultPresenter: CharacterDetailPresenter {
     // MARK: - Private
     func retrieveCharacterData() {
         interactorManager.characterDetailWith { [weak self] (characterDetail, error) in
+            // If presenter has ben freed before retrieving the data it is not necessary to continue interacting with the view
             guard let self = self else { return }
-            guard error == nil, let characterDetail = characterDetail else {
+            guard error == nil, let characterDetail = characterDetail else { // Error in request
                 if let error = error, error.code != HTTPRequestService.genericErrorCode {
                     self.view?.displayErrorWith(message: error.localizedDescription)
                 } else {
@@ -45,6 +47,7 @@ class CharacterDetailDefaultPresenter: CharacterDetailPresenter {
                 return
             }
             
+            // Use a class to build the data that is going to be shown in the view
             let viewModel = self.viewModelBuilder.buildViewModel(characterDetail: characterDetail)
             self.viewModel = viewModel
             self.view?.hideHUD()

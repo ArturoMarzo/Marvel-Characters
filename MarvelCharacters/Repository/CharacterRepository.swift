@@ -28,6 +28,7 @@ final class CharacterRepositoryDefault: CharacterRepository {
                 completion(nil, HTTPRequestService.genericError())
             }
         }) { (errorResponse) in
+            // Return error in request
             completion(nil, errorResponse)
         }
     }
@@ -50,6 +51,7 @@ final class CharacterRepositoryDefault: CharacterRepository {
                 completion(nil, HTTPRequestService.genericError())
             }
         }) { (errorResponse) in
+            // Return error in request
             completion(nil, errorResponse)
         }
     }

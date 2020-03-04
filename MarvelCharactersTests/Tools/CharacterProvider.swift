@@ -1,7 +1,8 @@
 import UIKit
 
+// Class to easily create characters to run the tests
 class CharacterProvider {
-    static func characterDTOWith(pageSize: Int, totalResults: Int) -> Characters {
+    static func characterWith(pageSize: Int, totalResults: Int) -> Characters {
         var charactersEntity = [CharacterEntity]()
         for index in 0...pageSize {
             let characterEntity = CharacterEntity(id: UInt(index),

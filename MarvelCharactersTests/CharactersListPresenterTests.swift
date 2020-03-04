@@ -1,6 +1,7 @@
 import XCTest
 @testable import MarvelCharacters
 
+// Bundle of tests for CharactersListDefaultPresenter functionality
 class CharactersListPresenterTests: XCTestCase {
 
     var sut: CharactersListDefaultPresenter!
@@ -362,6 +363,7 @@ class CharactersListPresenterTests: XCTestCase {
     }
 }
 
+// Dummy class that implements CharactersListView protocol to test that CharactersListDefaultPresenter call correctly the methods of CharactersListView
 class DummyCharactersListView: CharactersListView {
     var showHUDCalled = false
     var hideHUDCalled = false
@@ -398,6 +400,7 @@ class DummyCharactersListView: CharactersListView {
     }
 }
 
+// Dummy class that implements CharactersListInteractorManager protocol to test that CharactersListDefaultPresenter call correctly the methods of CharactersListDefaultInteractorManager
 class DummyCharactersListInteractorManager: CharactersListInteractorManager {
     var charactersRequested = false
     
@@ -418,13 +421,14 @@ class DummyCharactersListInteractorManager: CharactersListInteractorManager {
                 completion(nil, HTTPRequestService.genericError())
             }
         } else {
-            let characters = CharacterProvider.characterDTOWith(pageSize: pageSize,
-                                                                      totalResults: totalResults)
+            let characters = CharacterProvider.characterWith(pageSize: pageSize,
+                                                             totalResults: totalResults)
             completion(characters, nil)
         }
     }
 }
 
+// Dummy class that implements CharactersListRouter protocol to test that CharactersListDefaultPresenter call correctly the methods of CharactersListDefaultRouter
 class DummyCharactersListRouter: CharactersListRouter {
     var navigateToCharacterDetailWithCharacterId = false
     
@@ -436,6 +440,7 @@ class DummyCharactersListRouter: CharactersListRouter {
     }
 }
 
+// Dummy class that implements CharactersListViewModelBuilder protocol to test that CharactersListDefaultPresenter call correctly the methods of CharactersListDefaultViewModelBuilder
 class DummyCharactersListViewModelBuilder: CharactersListViewModelBuilder {
     var buildViewModelCharactersCalled = false
     var buildViewModelWithViewModelAppendingCharactersCalled = false

@@ -1,5 +1,6 @@
 import UIKit
 
+// Class useful to instatiate at the beginning navigationControllers appropiated to different states of app like logged or unlogged
 class BaseNavigationController: UINavigationController, UIGestureRecognizerDelegate {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -11,7 +12,7 @@ class BaseNavigationController: UINavigationController, UIGestureRecognizerDeleg
 
     override init(navigationBarClass: AnyClass?, toolbarClass: AnyClass?) {
         super.init(navigationBarClass: navigationBarClass, toolbarClass: toolbarClass)
-    }
+    } 
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)

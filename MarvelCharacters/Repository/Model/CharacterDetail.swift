@@ -26,11 +26,11 @@ struct CharacterDetail {
         }
         
         if let comics = characterDetailEntity.comics?.items {
-            var comicsDTO = [CharacterDetailComic]()
+            var comicsDetail = [CharacterDetailComic]()
             for comic in comics {
-                comicsDTO.append(CharacterDetailComic(name: comic.name))
+                comicsDetail.append(CharacterDetailComic(name: comic.name))
             }
-            self.comics = comicsDTO
+            self.comics = comicsDetail
             self.availableComics = characterDetailEntity.comics?.available ?? 0
         } else {
             self.comics = [CharacterDetailComic]()
@@ -38,23 +38,23 @@ struct CharacterDetail {
         }
         
         if let series = characterDetailEntity.series?.items {
-            var seriesDTO = [CharacterDetailSerie]()
+            var seriesDetail = [CharacterDetailSerie]()
             for serie in series {
-                seriesDTO.append(CharacterDetailSerie(name: serie.name))
+                seriesDetail.append(CharacterDetailSerie(name: serie.name))
             }
-            self.series = seriesDTO
+            self.series = seriesDetail
             self.availableSeries = characterDetailEntity.series?.available ?? 0
         } else {
             self.series = [CharacterDetailSerie]()
             self.availableSeries = 0
         }
         
-        if let storys = characterDetailEntity.stories?.items {
-            var storiesDTO = [CharacterDetailStory]()
-            for story in storys {
-                storiesDTO.append(CharacterDetailStory(name: story.name))
+        if let stories = characterDetailEntity.stories?.items {
+            var storysDetail = [CharacterDetailStory]()
+            for story in stories {
+                storysDetail.append(CharacterDetailStory(name: story.name))
             }
-            self.stories = storiesDTO
+            self.stories = storysDetail
             self.availableStories = characterDetailEntity.stories?.available ?? 0
         } else {
             self.stories = [CharacterDetailStory]()

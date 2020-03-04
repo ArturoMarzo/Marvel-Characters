@@ -43,8 +43,8 @@ final class CharacterRepositoryDefault: CharacterRepository {
                     return
                 }
                 
-                let characterDetailDTO = CharacterDetail(characterDetailEntity: characterDetailEntity)
-                completion(characterDetailDTO, nil)
+                let characterDetail = CharacterDetail(characterDetailEntity: characterDetailEntity)
+                completion(characterDetail, nil)
             } else {
                 // Data retrieved can't be processed
                 completion(nil, HTTPRequestService.genericError())

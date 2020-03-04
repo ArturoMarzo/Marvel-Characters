@@ -33,9 +33,9 @@ class CharacterDetailDefaultPresenter: CharacterDetailPresenter {
     
     // MARK: - Private
     func retrieveCharacterData() {
-        interactorManager.characterDetailWith { [weak self] (characterDetailDTO, error) in
+        interactorManager.characterDetailWith { [weak self] (characterDetail, error) in
             guard let self = self else { return }
-            guard error == nil, let characterDetailDTO = characterDetailDTO else {
+            guard error == nil, let characterDetail = characterDetail else {
                 if let error = error, error.code != HTTPRequestService.genericErrorCode {
                     self.view?.displayErrorWith(message: error.localizedDescription)
                 } else {
@@ -45,7 +45,7 @@ class CharacterDetailDefaultPresenter: CharacterDetailPresenter {
                 return
             }
             
-            let viewModel = self.viewModelBuilder.buildViewModel(characterDetail: characterDetailDTO)
+            let viewModel = self.viewModelBuilder.buildViewModel(characterDetail: characterDetail)
             self.viewModel = viewModel
             self.view?.hideHUD()
             self.view?.displayCharacterDetail(withViewModel: viewModel)

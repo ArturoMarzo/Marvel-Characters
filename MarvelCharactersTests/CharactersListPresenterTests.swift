@@ -6,7 +6,6 @@ class CharactersListPresenterTests: XCTestCase {
     var sut: CharactersListDefaultPresenter!
     
     func test_givenAPresenter_WhenICallViewDidLoad_thenICallShowHUD() {
-        
         let dummyView = DummyCharactersListView()
         sut = CharactersListDefaultPresenter(interactorManager: DummyCharactersListInteractorManager(),
                                              router: DummyCharactersListRouter(),
@@ -17,7 +16,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallViewDidLoad_thenIRequestCharacters() {
-        
         let dummyInteractor = DummyCharactersListInteractorManager()
         sut = CharactersListDefaultPresenter(interactorManager: dummyInteractor,
                                              router: DummyCharactersListRouter(),
@@ -28,7 +26,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallViewDidLoad_thenIRetrieveCharactersWithOffsetZero() {
-        
         let dummyInteractor = DummyCharactersListInteractorManager()
         sut = CharactersListDefaultPresenter(interactorManager: dummyInteractor,
                                              router: DummyCharactersListRouter(),
@@ -39,7 +36,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallViewDidLoadAndIRetrieveCharactersAndIGetAnError_thenICallDisplayError() {
-        
         let dummyView = DummyCharactersListView()
         let dummyInteractor = DummyCharactersListInteractorManager()
         dummyInteractor.returnError = true
@@ -52,7 +48,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallViewDidLoadAndIRetrieveCharactersAndIGetAGenericError_thenICallDisplayGenericErrorMessage() {
-        
         let dummyView = DummyCharactersListView()
         let dummyInteractor = DummyCharactersListInteractorManager()
         dummyInteractor.returnError = true
@@ -67,7 +62,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallViewDidLoadAndIRetrieveCharactersAndIGetASpecificError_thenICallDisplayLocalizedErrorMessage() {
-        
         let dummyView = DummyCharactersListView()
         let dummyInteractor = DummyCharactersListInteractorManager()
         dummyInteractor.returnError = true
@@ -82,7 +76,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallViewDidLoadAndIRetrieveCharacters_thenICallBuildViewModelCharactersCalled() {
-        
         let dummyViewModelBuilder = DummyCharactersListViewModelBuilder()
         sut = CharactersListDefaultPresenter(interactorManager: DummyCharactersListInteractorManager(),
                                              router: DummyCharactersListRouter(),
@@ -93,7 +86,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallViewDidLoadAndIRetrieveCharacters_thenICallHideHUD() {
-        
         let dummyView = DummyCharactersListView()
         sut = CharactersListDefaultPresenter(interactorManager: DummyCharactersListInteractorManager(),
                                              router: DummyCharactersListRouter(),
@@ -104,7 +96,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallViewDidLoadAndIRetrieveCharacters_thenICallDisplayCharactersWithViewModelCalled() {
-        
         let dummyView = DummyCharactersListView()
         sut = CharactersListDefaultPresenter(interactorManager: DummyCharactersListInteractorManager(),
                                              router: DummyCharactersListRouter(),
@@ -115,7 +106,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallLoadingCellShownAndIDontCallViewDidLoad_thenICallDisplayGenericErrorMessage() {
-        
         let dummyView = DummyCharactersListView()
         sut = CharactersListDefaultPresenter(interactorManager: DummyCharactersListInteractorManager(),
                                              router: DummyCharactersListRouter(),
@@ -127,7 +117,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallLoadingCellShownAndIDontCallViewDidLoad_thenIDontRequestCharacters() {
-        
         let dummyInteractor = DummyCharactersListInteractorManager()
         sut = CharactersListDefaultPresenter(interactorManager: dummyInteractor,
                                              router: DummyCharactersListRouter(),
@@ -138,7 +127,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallLoadingCellShownAfterCallViewDidLoad_thenIRequestCharacters() {
-        
         let dummyInteractor = DummyCharactersListInteractorManager()
         sut = CharactersListDefaultPresenter(interactorManager: dummyInteractor,
                                              router: DummyCharactersListRouter(),
@@ -150,7 +138,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallLoadingCellShownAfterCallViewDidLoad_thenIRequestCharactersWithOffsetGreaterThanZero() {
-        
         let dummyInteractor = DummyCharactersListInteractorManager()
         sut = CharactersListDefaultPresenter(interactorManager: dummyInteractor,
                                              router: DummyCharactersListRouter(),
@@ -162,7 +149,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallLoadingCellShownAfterCallViewDidLoadAndRequestingCharactersIGetError_thenICallBuildViewModelWithErrorMode() {
-        
         let dummyInteractor = DummyCharactersListInteractorManager()
         let dummyViewModelBuilder = DummyCharactersListViewModelBuilder()
         sut = CharactersListDefaultPresenter(interactorManager: dummyInteractor,
@@ -177,7 +163,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallLoadingCellShownAfterCallViewDidLoadAndRequestingCharactersIGetError_thenICallDisplayCharactersWithViewModelCalled() {
-        
         let dummyView = DummyCharactersListView()
         let dummyInteractor = DummyCharactersListInteractorManager()
         sut = CharactersListDefaultPresenter(interactorManager: dummyInteractor,
@@ -191,7 +176,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallLoadingCellShownAfterCallViewDidLoadAndIRetrieveCharacters_thenICallBuildViewModelWithViewModelAppendingCharactersCalled() {
-        
         let dummyViewModelBuilder = DummyCharactersListViewModelBuilder()
         sut = CharactersListDefaultPresenter(interactorManager: DummyCharactersListInteractorManager(),
                                              router: DummyCharactersListRouter(),
@@ -203,7 +187,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallRetryButtonPressed_thenICallHideErrorMessage() {
-        
         let dummyView = DummyCharactersListView()
         sut = CharactersListDefaultPresenter(interactorManager: DummyCharactersListInteractorManager(),
                                              router: DummyCharactersListRouter(),
@@ -214,7 +197,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallRetryButtonPressed_thenICallShowHUD() {
-        
         let dummyView = DummyCharactersListView()
         sut = CharactersListDefaultPresenter(interactorManager: DummyCharactersListInteractorManager(),
                                              router: DummyCharactersListRouter(),
@@ -225,7 +207,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallRetryButtonPressed_thenIRequestCharacters() {
-        
         let dummyInteractor = DummyCharactersListInteractorManager()
         sut = CharactersListDefaultPresenter(interactorManager: dummyInteractor,
                                              router: DummyCharactersListRouter(),
@@ -236,7 +217,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallRetryButtonPressed_thenIRetrieveCharactersWithOffsetZero() {
-        
         let dummyInteractor = DummyCharactersListInteractorManager()
         sut = CharactersListDefaultPresenter(interactorManager: dummyInteractor,
                                              router: DummyCharactersListRouter(),
@@ -247,7 +227,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallRetryButtonPressedAndIRetrieveCharactersAndIGetAnError_thenICallDisplayError() {
-        
         let dummyView = DummyCharactersListView()
         let dummyInteractor = DummyCharactersListInteractorManager()
         dummyInteractor.returnError = true
@@ -260,7 +239,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallRetryButtonPressedAndIRetrieveCharactersAndIGetAGenericError_thenICallDisplayGenericErrorMessage() {
-        
         let dummyView = DummyCharactersListView()
         let dummyInteractor = DummyCharactersListInteractorManager()
         dummyInteractor.returnError = true
@@ -275,7 +253,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallRetryButtonPressedAndIRetrieveCharactersAndIGetASpecificError_thenICallDisplayLocalizedErrorMessage() {
-        
         let dummyView = DummyCharactersListView()
         let dummyInteractor = DummyCharactersListInteractorManager()
         dummyInteractor.returnError = true
@@ -290,7 +267,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallRetryButtonPressedAndIRetrieveCharacters_thenICallBuildViewModelCharactersCalled() {
-        
         let dummyViewModelBuilder = DummyCharactersListViewModelBuilder()
         sut = CharactersListDefaultPresenter(interactorManager: DummyCharactersListInteractorManager(),
                                              router: DummyCharactersListRouter(),
@@ -301,7 +277,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallRetryButtonPressedAndIRetrieveCharacters_thenICallHideHUD() {
-        
         let dummyView = DummyCharactersListView()
         sut = CharactersListDefaultPresenter(interactorManager: DummyCharactersListInteractorManager(),
                                              router: DummyCharactersListRouter(),
@@ -312,7 +287,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallRetryButtonPressedAndIRetrieveCharacters_thenICallDisplayCharactersWithViewModelCalled() {
-        
         let dummyView = DummyCharactersListView()
         sut = CharactersListDefaultPresenter(interactorManager: DummyCharactersListInteractorManager(),
                                              router: DummyCharactersListRouter(),
@@ -323,7 +297,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallSelectdCharacterWithId_thenICallNavigateToCharacterDetailWithCharacterId() {
-        
         let dummyRouter = DummyCharactersListRouter()
         sut = CharactersListDefaultPresenter(interactorManager: DummyCharactersListInteractorManager(),
                                              router: dummyRouter,
@@ -334,7 +307,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallSelectdCharacterWithId_thenICallNavigateToCharacterDetailWithTheSameCharacterId() {
-        
         let dummyRouter = DummyCharactersListRouter()
         sut = CharactersListDefaultPresenter(interactorManager: DummyCharactersListInteractorManager(),
                                              router: dummyRouter,
@@ -346,7 +318,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallCellDelegateRetryButtonPressedWithoutViewDidLoad_thenIDontCallRetrieveCharacters() {
-        
         let dummyInteractor = DummyCharactersListInteractorManager()
         sut = CharactersListDefaultPresenter(interactorManager: dummyInteractor,
                                              router: DummyCharactersListRouter(),
@@ -357,7 +328,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallCellDelegateRetryButtonPressedAfterViewDidLoad_thenICallBuildViewModelWithLoadingMode() {
-        
         let dummyViewModelBuilder = DummyCharactersListViewModelBuilder()
         sut = CharactersListDefaultPresenter(interactorManager: DummyCharactersListInteractorManager(),
                                              router: DummyCharactersListRouter(),
@@ -370,7 +340,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallCellDelegateRetryButtonPressedAfterViewDidLoad_thenICallDisplayCharacters() {
-        
         let dummyView = DummyCharactersListView()
         sut = CharactersListDefaultPresenter(interactorManager: DummyCharactersListInteractorManager(),
                                              router: DummyCharactersListRouter(),
@@ -382,7 +351,6 @@ class CharactersListPresenterTests: XCTestCase {
     }
     
     func test_givenAPresenter_WhenICallCellDelegateRetryButtonPressedAfterViewDidLoad_thenICallRetrieveCharacters() {
-        
         let dummyInteractor = DummyCharactersListInteractorManager()
         sut = CharactersListDefaultPresenter(interactorManager: dummyInteractor,
                                              router: DummyCharactersListRouter(),
@@ -476,20 +444,17 @@ class DummyCharactersListViewModelBuilder: CharactersListViewModelBuilder {
     
     func buildViewModel(characters: CharactersDTO) -> CharactersListViewModel {
         buildViewModelCharactersCalled = true
-        
         return CharactersListViewModel(charactersDTO: characters, charactersListViewModelMode: .allDataLoaded)
     }
     
     func buildViewModelWith(viewModel: CharactersListViewModel, appendingCharacters charactersDTO: CharactersDTO) -> CharactersListViewModel {
         buildViewModelWithViewModelAppendingCharactersCalled = true
-        
         return viewModel.viewModelAppending(charactersDTO: charactersDTO, charactersListViewModelMode: .allDataLoaded)
     }
     
     func buildViewModel(characters: [CharacterViewModel], charactersListViewModelMode: CharactersListViewModelMode) -> CharactersListViewModel {
         buildViewModelCharactersCharactersListViewModelModeCalled = true
         self.charactersListViewModelMode = charactersListViewModelMode
-        
         return CharactersListViewModel(charactersViewModel: characters, charactersListViewModelMode: charactersListViewModelMode)
     }
 }

@@ -11,7 +11,6 @@
 		697A2DA72409A61500EADDBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 697A2DA62409A61500EADDBA /* Assets.xcassets */; };
 		697A2DAD2409A61500EADDBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 697A2DAB2409A61500EADDBA /* LaunchScreen.storyboard */; };
 		697A2DB82409A61500EADDBA /* CharactersListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A2DB72409A61500EADDBA /* CharactersListPresenterTests.swift */; };
-		697A2DCD2409AF6600EADDBA /* ApplicationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A2DCB2409AF6600EADDBA /* ApplicationConstants.swift */; };
 		697A2DE32409B38300EADDBA /* CharacterDetailContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A2DD02409B38200EADDBA /* CharacterDetailContract.swift */; };
 		697A2DE42409B38300EADDBA /* CharacterDetailDefaultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A2DD22409B38200EADDBA /* CharacterDetailDefaultPresenter.swift */; };
 		697A2DE52409B38300EADDBA /* CharacterDetailDefaultInteractorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A2DD32409B38200EADDBA /* CharacterDetailDefaultInteractorManager.swift */; };
@@ -31,7 +30,6 @@
 		697A2DF62409B4C200EADDBA /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A2DF32409B4C200EADDBA /* Container.swift */; };
 		697A2DFB2409B5FC00EADDBA /* BaseBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A2DF92409B5FC00EADDBA /* BaseBuilder.swift */; };
 		697A2DFC2409B5FC00EADDBA /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A2DFA2409B5FC00EADDBA /* BaseNavigationController.swift */; };
-		697A2DFE2409B74A00EADDBA /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A2DFD2409B74A00EADDBA /* MulticastDelegate.swift */; };
 		697A2E37240BC83800EADDBA /* HttpRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A2E36240BC83800EADDBA /* HttpRequestService.swift */; };
 		697A2E45240BC90400EADDBA /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A2E3D240BC90400EADDBA /* Configuration.swift */; };
 		697A2E55240BC95400EADDBA /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A2E4D240BC95400EADDBA /* Utils.swift */; };
@@ -78,7 +76,6 @@
 		697A2DB32409A61500EADDBA /* MarvelCharactersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelCharactersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		697A2DB72409A61500EADDBA /* CharactersListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListPresenterTests.swift; sourceTree = "<group>"; };
 		697A2DB92409A61500EADDBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		697A2DCB2409AF6600EADDBA /* ApplicationConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationConstants.swift; sourceTree = "<group>"; };
 		697A2DD02409B38200EADDBA /* CharacterDetailContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailContract.swift; sourceTree = "<group>"; };
 		697A2DD22409B38200EADDBA /* CharacterDetailDefaultPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailDefaultPresenter.swift; sourceTree = "<group>"; };
 		697A2DD32409B38200EADDBA /* CharacterDetailDefaultInteractorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailDefaultInteractorManager.swift; sourceTree = "<group>"; };
@@ -98,7 +95,6 @@
 		697A2DF32409B4C200EADDBA /* Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		697A2DF92409B5FC00EADDBA /* BaseBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseBuilder.swift; sourceTree = "<group>"; };
 		697A2DFA2409B5FC00EADDBA /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
-		697A2DFD2409B74A00EADDBA /* MulticastDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
 		697A2E36240BC83800EADDBA /* HttpRequestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequestService.swift; sourceTree = "<group>"; };
 		697A2E3D240BC90400EADDBA /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		697A2E4D240BC95400EADDBA /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -192,22 +188,12 @@
 		697A2DC22409A94400EADDBA /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
-				697A2DC32409A95100EADDBA /* Classes */,
 				697A2DC42409A97A00EADDBA /* Container */,
 				697A2E33240BC34D00EADDBA /* Network */,
 				697A2E49240BC95400EADDBA /* Utils */,
 				697A2DA02409A61000EADDBA /* AppDelegate.swift */,
-				697A2DCB2409AF6600EADDBA /* ApplicationConstants.swift */,
 			);
 			path = Infrastructure;
-			sourceTree = "<group>";
-		};
-		697A2DC32409A95100EADDBA /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				697A2DFD2409B74A00EADDBA /* MulticastDelegate.swift */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		697A2DC42409A97A00EADDBA /* Container */ = {
@@ -595,7 +581,6 @@
 				697A2DEA2409B38300EADDBA /* CharactersListViewController.swift in Sources */,
 				697A2E45240BC90400EADDBA /* Configuration.swift in Sources */,
 				697A2DF52409B4C200EADDBA /* Container+Builders.swift in Sources */,
-				697A2DFE2409B74A00EADDBA /* MulticastDelegate.swift in Sources */,
 				697A2DF42409B4C200EADDBA /* RepositoriesContainer.swift in Sources */,
 				697A2E58240BC95400EADDBA /* CharacterSetExtension.swift in Sources */,
 				697A2DEF2409B38300EADDBA /* CharactersListContract.swift in Sources */,
@@ -604,7 +589,6 @@
 				697A2E6D240C36EB00EADDBA /* UITableViewCell+RegisterNib.swift in Sources */,
 				69F9E6D0240F211000D4B93B /* CharactersListDefaultViewModelBuilder.swift in Sources */,
 				697A2DE32409B38300EADDBA /* CharacterDetailContract.swift in Sources */,
-				697A2DCD2409AF6600EADDBA /* ApplicationConstants.swift in Sources */,
 				697A2E59240BC95400EADDBA /* DictionaryExtension.swift in Sources */,
 				697A2DF62409B4C200EADDBA /* Container.swift in Sources */,
 				697A2DFC2409B5FC00EADDBA /* BaseNavigationController.swift in Sources */,

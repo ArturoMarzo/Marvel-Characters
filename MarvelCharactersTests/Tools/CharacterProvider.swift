@@ -1,6 +1,6 @@
 import UIKit
 
-class CharacterDTOProvider {
+class CharacterProvider {
     static func characterDTOWith(pageSize: Int, totalResults: Int) -> Characters {
         var charactersEntity = [CharacterEntity]()
         for index in 0...pageSize {
@@ -12,8 +12,8 @@ class CharacterDTOProvider {
             charactersEntity.append(characterEntity)
         }
         
-        let charactersDTO = Characters(charactersEntity: charactersEntity, total: totalResults)
+        let characters = Characters(charactersEntity: charactersEntity, total: totalResults)
         
-        return charactersDTO
+        return characters
     }
 }

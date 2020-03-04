@@ -150,7 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				697A2D9F2409A61000EADDBA /* MarvelCharacters */,
-				697A2DB62409A61500EADDBA /* MarvelHeroesTests */,
+				697A2DB62409A61500EADDBA /* MarvelCharactersTests */,
 				697A2D9E2409A61000EADDBA /* Products */,
 				D46ED20D3D3656FAF0140CA7 /* Pods */,
 				CFC0B8AAE0045FD1C27E8898 /* Frameworks */,
@@ -179,14 +179,14 @@
 			path = MarvelCharacters;
 			sourceTree = "<group>";
 		};
-		697A2DB62409A61500EADDBA /* MarvelHeroesTests */ = {
+		697A2DB62409A61500EADDBA /* MarvelCharactersTests */ = {
 			isa = PBXGroup;
 			children = (
 				69F9E6CC240F1A6000D4B93B /* Tools */,
 				697A2DB72409A61500EADDBA /* CharactersListPresenterTests.swift */,
 				697A2DB92409A61500EADDBA /* Info.plist */,
 			);
-			path = MarvelHeroesTests;
+			path = MarvelCharactersTests;
 			sourceTree = "<group>";
 		};
 		697A2DC22409A94400EADDBA /* Infrastructure */ = {

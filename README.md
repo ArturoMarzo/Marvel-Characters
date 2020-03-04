@@ -15,7 +15,7 @@ Inyector de dependencias que proporciona los constructores que generarán las di
 Inyector de dependencias que proporciona los repositorios. En este caso solamente uno dada la simplicidad del proyecto.
 
 #### Network
-Dispone de una serie de clases encargadas de hacer las peticiones de red y configurar los endpoints para diferentes entornos en base al fichero `Configuration.plist`.
+Dispone de una serie de clases encargadas de hacer las peticiones de red y configurar los endpoints para diferentes entornos en base al fichero `Configuration.plist`. 
 
 #### Utils
 Una colección de extensiones y un fichero `Utils.swift` para reunir diferentes funciones genéricas útiles.
@@ -25,7 +25,8 @@ Aquí se reune la funcionalidad encargada del tratamiento de los datos. Dispone 
 
 En la carpeta _Model_ se encuentran las clases para la gestión de los datos. La información procedente del servidor se parsea en objetos _Entity_ de tipo `Codable` a fin de poderse emplear para el parseo. Posteriormente estos datos son convertidos a estructuras que se emplean para la distribución de la información a lo largo de la app.
 
-El empleo de estructuras en lugar de clases para almacenar los datos previene el problema la mutabilidad de los datos. 
+El empleo de estructuras en lugar de clases para almacenar los datos previene un problema de mutabilidad de datos. 
+Anotación: Debido a que las urls de las imágenes se devuelven sin seguridad durante la conversión de los datos parseados a estructuras para distribuir por la app se han cambiado para incluir la petición de seguridad y evitar añadir una excepción en el fichero `Info.plist`.
 
 ### Presentation
 En este carpeta se reunen las clases encargadas de los diferentes casos de uso de las vistas.

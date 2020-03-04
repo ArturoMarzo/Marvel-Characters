@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "HeroesListDefaultBuilder.buildHeroesListModule():HeroesListDefaultBuilder.swift">
+      </ContextState>
+      <ContextState
+         contextName = "HeroesListViewController.viewDidLoad():HeroesListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.view">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

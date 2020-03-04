@@ -11,9 +11,9 @@ struct CharactersListViewModel {
     var characters: [CharacterViewModel]
     var charactersListViewModelMode: CharactersListViewModelMode
     
-    init(charactersDTO: Characters, charactersListViewModelMode: CharactersListViewModelMode) {
+    init(characters: Characters, charactersListViewModelMode: CharactersListViewModelMode) {
         var charactersViewModel = [CharacterViewModel]()
-        for character in charactersDTO.characters {
+        for character in characters.characters {
             charactersViewModel.append(CharacterViewModel(character: character))
         }
         
@@ -26,9 +26,9 @@ struct CharactersListViewModel {
         self.charactersListViewModelMode = charactersListViewModelMode
     }
     
-    func viewModelAppending(charactersDTO: Characters, charactersListViewModelMode: CharactersListViewModelMode) -> CharactersListViewModel {
+    func viewModelAppending(characters: Characters, charactersListViewModelMode: CharactersListViewModelMode) -> CharactersListViewModel {
         var charactersViewModel = self.characters
-        for character in charactersDTO.characters {
+        for character in characters.characters {
             charactersViewModel.append(CharacterViewModel(character: character))
         }
         
@@ -59,17 +59,17 @@ class CharactersListDefaultViewModelBuilder: CharactersListViewModelBuilder {
             charactersListViewModelMode = .loading
         }
         
-        return CharactersListViewModel(charactersDTO: characters, charactersListViewModelMode: charactersListViewModelMode)
+        return CharactersListViewModel(characters: characters, charactersListViewModelMode: charactersListViewModelMode)
     }
     
-    func buildViewModelWith(viewModel: CharactersListViewModel, appendingCharacters charactersDTO: Characters) -> CharactersListViewModel {
+    func buildViewModelWith(viewModel: CharactersListViewModel, appendingCharacters characters: Characters) -> CharactersListViewModel {
         var charactersListViewModelMode = CharactersListViewModelMode.allDataLoaded
-        if let totalOfCharacters = charactersDTO.total,
-            totalOfCharacters > (charactersDTO.characters.count + viewModel.characters.count) {
+        if let totalOfCharacters = characters.total,
+            totalOfCharacters > (characters.characters.count + viewModel.characters.count) {
             charactersListViewModelMode = .loading
         }
         
-        return viewModel.viewModelAppending(charactersDTO: charactersDTO, charactersListViewModelMode: charactersListViewModelMode)
+        return viewModel.viewModelAppending(characters: characters, charactersListViewModelMode: charactersListViewModelMode)
     }
     
     func buildViewModel(characters: [CharacterViewModel], charactersListViewModelMode: CharactersListViewModelMode) -> CharactersListViewModel {

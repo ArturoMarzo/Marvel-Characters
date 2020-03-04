@@ -46,9 +46,9 @@ class CharactersListDefaultPresenter: CharactersListPresenter {
     
     // MARK: - Private
     func retrieveCharacters(offset: Int) {
-        interactorManager.characters(offset: offset) { [weak self] (charactersDTO, error) in
+        interactorManager.characters(offset: offset) { [weak self] (characters, error) in
             guard let self = self else { return }
-            guard error == nil, let charactersDTO = charactersDTO else {
+            guard error == nil, let characters = characters else {
                 if let viewModel = self.viewModel {
                     // If request failed show retry option in cell
                     let newViewModel = self.viewModelBuilder.buildViewModel(characters: viewModel.characters, charactersListViewModelMode: .error)
@@ -66,9 +66,9 @@ class CharactersListDefaultPresenter: CharactersListPresenter {
             
             let viewModel: CharactersListViewModel
             if let currentViewModel = self.viewModel {
-                viewModel = self.viewModelBuilder.buildViewModelWith(viewModel: currentViewModel, appendingCharacters: charactersDTO)
+                viewModel = self.viewModelBuilder.buildViewModelWith(viewModel: currentViewModel, appendingCharacters: characters)
             } else {
-                viewModel = self.viewModelBuilder.buildViewModel(characters: charactersDTO)
+                viewModel = self.viewModelBuilder.buildViewModel(characters: characters)
             }
             
             self.viewModel = viewModel

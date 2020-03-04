@@ -418,9 +418,9 @@ class DummyCharactersListInteractorManager: CharactersListInteractorManager {
                 completion(nil, HTTPRequestService.genericError())
             }
         } else {
-            let charactersDTO = CharacterDTOProvider.characterDTOWith(pageSize: pageSize,
+            let characters = CharacterProvider.characterDTOWith(pageSize: pageSize,
                                                                       totalResults: totalResults)
-            completion(charactersDTO, nil)
+            completion(characters, nil)
         }
     }
 }
@@ -444,12 +444,12 @@ class DummyCharactersListViewModelBuilder: CharactersListViewModelBuilder {
     
     func buildViewModel(characters: Characters) -> CharactersListViewModel {
         buildViewModelCharactersCalled = true
-        return CharactersListViewModel(charactersDTO: characters, charactersListViewModelMode: .allDataLoaded)
+        return CharactersListViewModel(characters: characters, charactersListViewModelMode: .allDataLoaded)
     }
     
-    func buildViewModelWith(viewModel: CharactersListViewModel, appendingCharacters charactersDTO: Characters) -> CharactersListViewModel {
+    func buildViewModelWith(viewModel: CharactersListViewModel, appendingCharacters characters: Characters) -> CharactersListViewModel {
         buildViewModelWithViewModelAppendingCharactersCalled = true
-        return viewModel.viewModelAppending(charactersDTO: charactersDTO, charactersListViewModelMode: .allDataLoaded)
+        return viewModel.viewModelAppending(characters: characters, charactersListViewModelMode: .allDataLoaded)
     }
     
     func buildViewModel(characters: [CharacterViewModel], charactersListViewModelMode: CharactersListViewModelMode) -> CharactersListViewModel {

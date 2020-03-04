@@ -2,17 +2,17 @@ import UIKit
 
 class CharacterDTOProvider {
     static func characterDTOWith(pageSize: Int, totalResults: Int) -> CharactersDTO {
-        var charactersDAO = [CharacterDAO]()
+        var charactersEntity = [CharacterEntity]()
         for index in 0...pageSize {
-            let characterDAO = CharacterDAO(id: UInt(index),
+            let characterEntity = CharacterEntity(id: UInt(index),
                                             name: "name",
                                             description: "description",
-                                            thumbnail: CharacterImageDAO(path: "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+                                            thumbnail: CharacterImageEntity(path: "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
                                                                          extensionFile: "jpg"))
-            charactersDAO.append(characterDAO)
+            charactersEntity.append(characterEntity)
         }
         
-        let charactersDTO = CharactersDTO(charactersDAO: charactersDAO, total: totalResults)
+        let charactersDTO = CharactersDTO(charactersEntity: charactersEntity, total: totalResults)
         
         return charactersDTO
     }

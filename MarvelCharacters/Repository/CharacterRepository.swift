@@ -15,13 +15,13 @@ final class CharacterRepositoryDefault: CharacterRepository {
         
         HTTPRequestService.request(url: ServerHostURL.charactersListURL(), httpMethod: .get, parameters: parameters, headers: nil, success: { (responseJSON, data) in
             // Deserialize the data
-            if let characterResponseDAO = try? JSONDecoder().decode(CharactersListResponseDAO.self, from: data) {
-                guard let results = characterResponseDAO.data?.results else {
+            if let characterResponseEntity = try? JSONDecoder().decode(CharactersListResponseEntity.self, from: data) {
+                guard let results = characterResponseEntity.data?.results else {
                     completion(nil, HTTPRequestService.genericError())
                     return
                 }
                 
-                let charactersDTO = CharactersDTO(charactersDAO: results, total: characterResponseDAO.data?.total)
+                let charactersDTO = CharactersDTO(charactersEntity: results, total: characterResponseEntity.data?.total)
                 completion(charactersDTO, nil)
             } else {
                 // Data retrieved can't be processed
@@ -37,13 +37,13 @@ final class CharacterRepositoryDefault: CharacterRepository {
         
         HTTPRequestService.request(url: ServerHostURL.characterDetailURL(id: id), httpMethod: .get, parameters: parameters, headers: nil, success: { (responseJSON, data) in
             // Deserialize the data
-            if let characterDetailResponseDAO = try? JSONDecoder().decode(CharacterDetailResponseDAO.self, from: data) {
-                guard let characterDetailDAO = characterDetailResponseDAO.data?.results?.first else {
+            if let characterDetailResponseEntity = try? JSONDecoder().decode(CharacterDetailResponseEntity.self, from: data) {
+                guard let characterDetailEntity = characterDetailResponseEntity.data?.results?.first else {
                     completion(nil, HTTPRequestService.genericError())
                     return
                 }
                 
-                let characterDetailDTO = CharacterDetailDTO(characterDetailDAO: characterDetailDAO)
+                let characterDetailDTO = CharacterDetailDTO(characterDetailEntity: characterDetailEntity)
                 completion(characterDetailDTO, nil)
             } else {
                 // Data retrieved can't be processed

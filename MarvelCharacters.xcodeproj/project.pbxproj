@@ -39,7 +39,7 @@
 		697A2E59240BC95400EADDBA /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A2E52240BC95400EADDBA /* DictionaryExtension.swift */; };
 		697A2E5B240BCD0700EADDBA /* ServerHostURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A2E5A240BCD0700EADDBA /* ServerHostURL.swift */; };
 		697A2E5D240BD07F00EADDBA /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 697A2E5C240BD07F00EADDBA /* Configuration.plist */; };
-		697A2E61240BE0C100EADDBA /* CharacterDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A2E60240BE0C100EADDBA /* CharacterDAO.swift */; };
+		697A2E61240BE0C100EADDBA /* CharacterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A2E60240BE0C100EADDBA /* CharacterEntity.swift */; };
 		697A2E64240BE2E000EADDBA /* CharacterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A2E63240BE2E000EADDBA /* CharacterRepository.swift */; };
 		697A2E66240BE9D800EADDBA /* CharacterDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A2E65240BE9D800EADDBA /* CharacterDTO.swift */; };
 		697A2E6A240C2FF900EADDBA /* CharacterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 697A2E68240C2FF900EADDBA /* CharacterTableViewCell.xib */; };
@@ -48,7 +48,7 @@
 		697A2E72240D9CA800EADDBA /* LoadingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 697A2E70240D9CA800EADDBA /* LoadingTableViewCell.xib */; };
 		697A2E73240D9CA800EADDBA /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A2E71240D9CA800EADDBA /* LoadingTableViewCell.swift */; };
 		697A2E76240DD8DE00EADDBA /* CharacterDetailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A2E74240DD8DD00EADDBA /* CharacterDetailDTO.swift */; };
-		697A2E77240DD8DE00EADDBA /* CharacterDetailDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A2E75240DD8DE00EADDBA /* CharacterDetailDAO.swift */; };
+		697A2E77240DD8DE00EADDBA /* CharacterDetailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A2E75240DD8DE00EADDBA /* CharacterDetailEntity.swift */; };
 		697A2E80240EF40400EADDBA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 697A2E82240EF40400EADDBA /* Localizable.strings */; };
 		69F9E6CB240F10F100D4B93B /* ErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F9E6CA240F10F100D4B93B /* ErrorExtension.swift */; };
 		69F9E6CE240F1A7A00D4B93B /* CharacterDTOProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F9E6CD240F1A7A00D4B93B /* CharacterDTOProvider.swift */; };
@@ -106,7 +106,7 @@
 		697A2E52240BC95400EADDBA /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
 		697A2E5A240BCD0700EADDBA /* ServerHostURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerHostURL.swift; sourceTree = "<group>"; };
 		697A2E5C240BD07F00EADDBA /* Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
-		697A2E60240BE0C100EADDBA /* CharacterDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDAO.swift; sourceTree = "<group>"; };
+		697A2E60240BE0C100EADDBA /* CharacterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterEntity.swift; sourceTree = "<group>"; };
 		697A2E63240BE2E000EADDBA /* CharacterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepository.swift; sourceTree = "<group>"; };
 		697A2E65240BE9D800EADDBA /* CharacterDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDTO.swift; sourceTree = "<group>"; };
 		697A2E68240C2FF900EADDBA /* CharacterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterTableViewCell.xib; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 		697A2E70240D9CA800EADDBA /* LoadingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingTableViewCell.xib; sourceTree = "<group>"; };
 		697A2E71240D9CA800EADDBA /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
 		697A2E74240DD8DD00EADDBA /* CharacterDetailDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailDTO.swift; sourceTree = "<group>"; };
-		697A2E75240DD8DE00EADDBA /* CharacterDetailDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailDAO.swift; sourceTree = "<group>"; };
+		697A2E75240DD8DE00EADDBA /* CharacterDetailEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailEntity.swift; sourceTree = "<group>"; };
 		697A2E81240EF40400EADDBA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		697A2E83240EF40B00EADDBA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		69F9E6CA240F10F100D4B93B /* ErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorExtension.swift; sourceTree = "<group>"; };
@@ -356,9 +356,9 @@
 		697A2E32240BC32F00EADDBA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				697A2E60240BE0C100EADDBA /* CharacterDAO.swift */,
+				697A2E60240BE0C100EADDBA /* CharacterEntity.swift */,
 				697A2E65240BE9D800EADDBA /* CharacterDTO.swift */,
-				697A2E75240DD8DE00EADDBA /* CharacterDetailDAO.swift */,
+				697A2E75240DD8DE00EADDBA /* CharacterDetailEntity.swift */,
 				697A2E74240DD8DD00EADDBA /* CharacterDetailDTO.swift */,
 			);
 			path = Model;
@@ -591,7 +591,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				697A2E61240BE0C100EADDBA /* CharacterDAO.swift in Sources */,
+				697A2E61240BE0C100EADDBA /* CharacterEntity.swift in Sources */,
 				697A2DEA2409B38300EADDBA /* CharactersListViewController.swift in Sources */,
 				697A2E45240BC90400EADDBA /* Configuration.swift in Sources */,
 				697A2DF52409B4C200EADDBA /* Container+Builders.swift in Sources */,
@@ -600,7 +600,7 @@
 				697A2E58240BC95400EADDBA /* CharacterSetExtension.swift in Sources */,
 				697A2DEF2409B38300EADDBA /* CharactersListContract.swift in Sources */,
 				697A2E55240BC95400EADDBA /* Utils.swift in Sources */,
-				697A2E77240DD8DE00EADDBA /* CharacterDetailDAO.swift in Sources */,
+				697A2E77240DD8DE00EADDBA /* CharacterDetailEntity.swift in Sources */,
 				697A2E6D240C36EB00EADDBA /* UITableViewCell+RegisterNib.swift in Sources */,
 				69F9E6D0240F211000D4B93B /* CharactersListDefaultViewModelBuilder.swift in Sources */,
 				697A2DE32409B38300EADDBA /* CharacterDetailContract.swift in Sources */,
@@ -801,7 +801,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = AMF.MarvelHeroes;
+				PRODUCT_BUNDLE_IDENTIFIER = AMF.MarvelCharacter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -822,7 +822,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = AMF.MarvelHeroes;
+				PRODUCT_BUNDLE_IDENTIFIER = AMF.MarvelCharacter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -836,14 +836,14 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5XJG76K5R2;
-				INFOPLIST_FILE = MarvelHeroesTests/Info.plist;
+				INFOPLIST_FILE = MarvelCharactersTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = AMF.MarvelHeroesTests;
+				PRODUCT_BUNDLE_IDENTIFIER = AMF.MarvelCharactersTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -858,14 +858,14 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5XJG76K5R2;
-				INFOPLIST_FILE = MarvelHeroesTests/Info.plist;
+				INFOPLIST_FILE = MarvelCharactersTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = AMF.MarvelHeroesTests;
+				PRODUCT_BUNDLE_IDENTIFIER = AMF.MarvelCharactersTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

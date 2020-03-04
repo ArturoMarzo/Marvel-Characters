@@ -30,6 +30,6 @@ protocol CharactersListRouter {
 
 protocol CharactersListViewModelBuilder {
     func buildViewModel(characters: Characters) -> CharactersListViewModel
-    func buildViewModelWith(viewModel: CharactersListViewModel, appendingCharacters charactersDTO: Characters) -> CharactersListViewModel
+    func buildViewModelWith(viewModel: CharactersListViewModel, appendingCharacters characters: Characters) -> CharactersListViewModel
     func buildViewModel(characters: [CharacterViewModel], charactersListViewModelMode: CharactersListViewModelMode) -> CharactersListViewModel
 }

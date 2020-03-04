@@ -8,14 +8,14 @@ struct Characters {
     init(charactersEntity: [CharacterEntity], total: Int?) {
         self.total = total
         
-        var charactersDTO = [Character]()
+        var characters = [Character]()
         
         for characterEntity in charactersEntity {
             guard let character = Character(character: characterEntity) else { continue }
-            charactersDTO.append(character)
+            characters.append(character)
         }
         
-        self.characters = charactersDTO
+        self.characters = characters
     }
 }
 

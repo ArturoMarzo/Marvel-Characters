@@ -12,12 +12,12 @@ struct CharactersListViewModel {
     var charactersListViewModelMode: CharactersListViewModelMode
     
     init(charactersDTO: Characters, charactersListViewModelMode: CharactersListViewModelMode) {
-        var characters = [CharacterViewModel]()
+        var charactersViewModel = [CharacterViewModel]()
         for character in charactersDTO.characters {
-            characters.append(CharacterViewModel(character: character))
+            charactersViewModel.append(CharacterViewModel(character: character))
         }
         
-        self.characters = characters
+        self.characters = charactersViewModel
         self.charactersListViewModelMode = charactersListViewModelMode
     }
     
@@ -27,12 +27,12 @@ struct CharactersListViewModel {
     }
     
     func viewModelAppending(charactersDTO: Characters, charactersListViewModelMode: CharactersListViewModelMode) -> CharactersListViewModel {
-        var characters = self.characters
+        var charactersViewModel = self.characters
         for character in charactersDTO.characters {
-            characters.append(CharacterViewModel(character: character))
+            charactersViewModel.append(CharacterViewModel(character: character))
         }
         
-        let charactersListViewModel = CharactersListViewModel(charactersViewModel: characters, charactersListViewModelMode: charactersListViewModelMode)
+        let charactersListViewModel = CharactersListViewModel(charactersViewModel: charactersViewModel, charactersListViewModelMode: charactersListViewModelMode)
         
         return charactersListViewModel
     }

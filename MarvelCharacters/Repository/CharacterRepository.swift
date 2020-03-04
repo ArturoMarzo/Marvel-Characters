@@ -21,8 +21,8 @@ final class CharacterRepositoryDefault: CharacterRepository {
                     return
                 }
                 
-                let charactersDTO = Characters(charactersEntity: results, total: characterResponseEntity.data?.total)
-                completion(charactersDTO, nil)
+                let characters = Characters(charactersEntity: results, total: characterResponseEntity.data?.total)
+                completion(characters, nil)
             } else {
                 // Data retrieved can't be processed
                 completion(nil, HTTPRequestService.genericError())

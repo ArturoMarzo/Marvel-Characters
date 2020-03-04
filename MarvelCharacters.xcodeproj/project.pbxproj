@@ -166,7 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				697A2DC22409A94400EADDBA /* Infrastructure */,
-				697A2DC52409A99A00EADDBA /* Bussiness */,
 				697A2DC62409A9A800EADDBA /* Repository */,
 				697A2DC82409A9C500EADDBA /* Presentation */,
 				697A2DC92409A9ED00EADDBA /* Resources */,
@@ -204,13 +203,6 @@
 				697A2DF12409B4C200EADDBA /* RepositoriesContainer.swift */,
 			);
 			path = Container;
-			sourceTree = "<group>";
-		};
-		697A2DC52409A99A00EADDBA /* Bussiness */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Bussiness;
 			sourceTree = "<group>";
 		};
 		697A2DC62409A9A800EADDBA /* Repository */ = {
@@ -342,10 +334,10 @@
 		697A2E32240BC32F00EADDBA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				697A2E60240BE0C100EADDBA /* CharacterEntity.swift */,
 				697A2E65240BE9D800EADDBA /* Character.swift */,
-				697A2E75240DD8DE00EADDBA /* CharacterDetailEntity.swift */,
+				697A2E60240BE0C100EADDBA /* CharacterEntity.swift */,
 				697A2E74240DD8DD00EADDBA /* CharacterDetail.swift */,
+				697A2E75240DD8DE00EADDBA /* CharacterDetailEntity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

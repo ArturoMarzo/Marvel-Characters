@@ -20,7 +20,7 @@ struct CharacterDetail {
         description = characterDetailEntity.description
         if let path = characterDetailEntity.thumbnail?.path,
             let extensionFile = characterDetailEntity.thumbnail?.extensionFile {
-            thumbnail = "\(path).\(extensionFile)"
+            thumbnail = "\(path).\(extensionFile)".replacingOccurrences(of: "http", with: "https")
         } else {
             thumbnail = nil
         }

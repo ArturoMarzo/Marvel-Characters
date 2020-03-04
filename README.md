@@ -43,7 +43,7 @@ https://medium.com/build-and-run/clean-architecture-en-ios-viper-893c8c3a75a4
 
 La definición de protocolos en las clases `Contract` facilita posteriormente la escritura de tests para cualquier capa. Los datos que se proporcionan a la capa de la vista no siguen la estructura empleada para su transporte a lo largo de la app. En su lugar hay unas clases `ViewModelBuilder` que se encargan de generar una estructura de datos adecuada para su presentación por la vista.
 
-La capa de la vista debe de ser lo más _sencilla_ posible. De forma que no tenga conocimiento de la lógica de negocio y se limite a comunicar a la capa presenter las acciones realizadas por el usuario. Sin indicar a esta las acciones que debe de realizar ya que no forma parte de sus competencias.
+La capa de la vista debe de ser lo más _sencilla_ posible. De forma que no tenga conocimiento de la lógica de negocio y se limite a comunicar a la capa presenter las acciones realizadas por el usuario. No debe por tanto, indicar a esta las acciones que debe de realizar ya que no forma parte de sus competencias.
 
 La capa del interactor se encarga de suministrar los datos a la capa presenter. Finalmente la capa router es la responsable de la navegación por la app siguiendo las directrices de la capa presenter. 
 
@@ -54,7 +54,7 @@ En esta carpeta se reunen componentes visuales reutilizables como una celda para
 Directorio con ficheros básicos como el repositorio de imágenes o el fichero de cadenas localizadas.
 
 ## Tests
-Aunque se pretendía cubrir con tests toda la capa presenter por falta de tiempo únicamente se ha testeado `CharactersListPresenter`.
+Aunque se pretendía cubrir con tests toda la capa presenter por falta de tiempo únicamente se ha testeado `CharactersListPresenter`. Todos estos tests se encuentran reunidos en el fichero `CharactersListPresenterTests.swift`.
 
 Se emplea una clase `CharacterProvider` para proporcionar datos con los que alimentar a la capa presenter y al `ViewModelBuilder`.
 

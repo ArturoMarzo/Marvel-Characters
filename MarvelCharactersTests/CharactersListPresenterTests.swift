@@ -407,7 +407,7 @@ class DummyCharactersListInteractorManager: CharactersListInteractorManager {
     var returnError = false
     var returnErrorCode = -1
     
-    func characters(offset: Int, withCompletion completion: @escaping (CharactersDTO?, Error?) -> Void) {
+    func characters(offset: Int, withCompletion completion: @escaping (Characters?, Error?) -> Void) {
         self.charactersRequested = true
         self.offset = offset
         if returnError {
@@ -442,12 +442,12 @@ class DummyCharactersListViewModelBuilder: CharactersListViewModelBuilder {
     var buildViewModelCharactersCharactersListViewModelModeCalled = false
     var charactersListViewModelMode: CharactersListViewModelMode?
     
-    func buildViewModel(characters: CharactersDTO) -> CharactersListViewModel {
+    func buildViewModel(characters: Characters) -> CharactersListViewModel {
         buildViewModelCharactersCalled = true
         return CharactersListViewModel(charactersDTO: characters, charactersListViewModelMode: .allDataLoaded)
     }
     
-    func buildViewModelWith(viewModel: CharactersListViewModel, appendingCharacters charactersDTO: CharactersDTO) -> CharactersListViewModel {
+    func buildViewModelWith(viewModel: CharactersListViewModel, appendingCharacters charactersDTO: Characters) -> CharactersListViewModel {
         buildViewModelWithViewModelAppendingCharactersCalled = true
         return viewModel.viewModelAppending(charactersDTO: charactersDTO, charactersListViewModelMode: .allDataLoaded)
     }

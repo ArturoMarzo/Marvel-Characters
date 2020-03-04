@@ -6,7 +6,7 @@ protocol CharactersListBuilder {
 }
 
 protocol CharactersListInteractorManager {
-    func characters(offset: Int, withCompletion completion: @escaping (_ characters: CharactersDTO?, _ error: Error?) -> Void)
+    func characters(offset: Int, withCompletion completion: @escaping (_ characters: Characters?, _ error: Error?) -> Void)
 }
 
 protocol CharactersListPresenter: LoadingTableViewCellDelegate {
@@ -29,7 +29,7 @@ protocol CharactersListRouter {
 }
 
 protocol CharactersListViewModelBuilder {
-    func buildViewModel(characters: CharactersDTO) -> CharactersListViewModel
-    func buildViewModelWith(viewModel: CharactersListViewModel, appendingCharacters charactersDTO: CharactersDTO) -> CharactersListViewModel
+    func buildViewModel(characters: Characters) -> CharactersListViewModel
+    func buildViewModelWith(viewModel: CharactersListViewModel, appendingCharacters charactersDTO: Characters) -> CharactersListViewModel
     func buildViewModel(characters: [CharacterViewModel], charactersListViewModelMode: CharactersListViewModelMode) -> CharactersListViewModel
 }

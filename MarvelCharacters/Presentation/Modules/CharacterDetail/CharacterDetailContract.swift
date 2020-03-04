@@ -6,7 +6,7 @@ protocol CharacterDetailBuilder {
 }
 
 protocol CharacterDetailInteractorManager {
-    func characterDetailWith(withCompletion completion: @escaping (_ character: CharacterDetailDTO?, _ error: Error?) -> Void)
+    func characterDetailWith(withCompletion completion: @escaping (_ character: CharacterDetail?, _ error: Error?) -> Void)
 }
 
 protocol CharacterDetailPresenter {
@@ -27,5 +27,5 @@ protocol CharacterDetailRouter {
 }
 
 protocol CharacterDetailViewModelBuilder {
-    func buildViewModel(characterDetail: CharacterDetailDTO) -> CharacterDetailViewModel
+    func buildViewModel(characterDetail: CharacterDetail) -> CharacterDetailViewModel
 }

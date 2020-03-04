@@ -5,14 +5,14 @@ struct CharacterDetailViewModel {
     let name: String
     let description: String?
     let thumbnail: String?
-    let comics: [CharacterDetailComicDTO]?
+    let comics: [CharacterDetailComic]?
     let availableComics: Int
-    let series: [CharacterDetailSerieDTO]?
+    let series: [CharacterDetailSerie]?
     let availableSeries: Int
-    let stories: [CharacterDetailStoryDTO]?
+    let stories: [CharacterDetailStory]?
     let availableStories: Int
     
-    init(characterDetail: CharacterDetailDTO) {
+    init(characterDetail: CharacterDetail) {
         self.name = characterDetail.name
         self.description = characterDetail.description
         self.thumbnail = characterDetail.thumbnail
@@ -26,7 +26,7 @@ struct CharacterDetailViewModel {
 }
 
 class CharacterDetailDefaultViewModelBuilder: CharacterDetailViewModelBuilder {
-    func buildViewModel(characterDetail: CharacterDetailDTO) -> CharacterDetailViewModel {
+    func buildViewModel(characterDetail: CharacterDetail) -> CharacterDetailViewModel {
         return CharacterDetailViewModel(characterDetail: characterDetail)
     }
 }

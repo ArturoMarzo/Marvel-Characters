@@ -7,7 +7,7 @@ class CharactersListDefaultInteractorManager: CharactersListInteractorManager {
         self.characterRepository = characterRepository
     }
     
-    func characters(offset: Int, withCompletion completion: @escaping (_ characters: CharactersDTO?, _ error: Error?) -> Void) {
+    func characters(offset: Int, withCompletion completion: @escaping (_ characters: Characters?, _ error: Error?) -> Void) {
         characterRepository.characters(offset: offset, withCompletion: completion)
     }
 }

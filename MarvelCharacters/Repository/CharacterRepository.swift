@@ -1,14 +1,14 @@
 import UIKit
 
 protocol CharacterRepository {
-    func characters(offset: Int, withCompletion completion: @escaping (_ characters: CharactersDTO?, _ error: Error?) -> Void)
-    func characterDetailWith(id: UInt, withCompletion completion: @escaping (_ character: CharacterDetailDTO?, _ error: Error?) -> Void)
+    func characters(offset: Int, withCompletion completion: @escaping (_ characters: Characters?, _ error: Error?) -> Void)
+    func characterDetailWith(id: UInt, withCompletion completion: @escaping (_ character: CharacterDetail?, _ error: Error?) -> Void)
 }
 
 final class CharacterRepositoryDefault: CharacterRepository {
     static let pageSize = 20
     
-    func characters(offset: Int, withCompletion completion: @escaping (_ characters: CharactersDTO?, _ error: Error?) -> Void) {
+    func characters(offset: Int, withCompletion completion: @escaping (_ characters: Characters?, _ error: Error?) -> Void) {
         var parameters = ServerHostURL.authenticationParameters()
         parameters["limit"] = CharacterRepositoryDefault.pageSize
         parameters["offset"] = offset
@@ -21,7 +21,7 @@ final class CharacterRepositoryDefault: CharacterRepository {
                     return
                 }
                 
-                let charactersDTO = CharactersDTO(charactersEntity: results, total: characterResponseEntity.data?.total)
+                let charactersDTO = Characters(charactersEntity: results, total: characterResponseEntity.data?.total)
                 completion(charactersDTO, nil)
             } else {
                 // Data retrieved can't be processed
@@ -32,7 +32,7 @@ final class CharacterRepositoryDefault: CharacterRepository {
         }
     }
     
-    func characterDetailWith(id: UInt, withCompletion completion: @escaping (_ character: CharacterDetailDTO?, _ error: Error?) -> Void) {
+    func characterDetailWith(id: UInt, withCompletion completion: @escaping (_ character: CharacterDetail?, _ error: Error?) -> Void) {
         let parameters = ServerHostURL.authenticationParameters()
         
         HTTPRequestService.request(url: ServerHostURL.characterDetailURL(id: id), httpMethod: .get, parameters: parameters, headers: nil, success: { (responseJSON, data) in
@@ -43,7 +43,7 @@ final class CharacterRepositoryDefault: CharacterRepository {
                     return
                 }
                 
-                let characterDetailDTO = CharacterDetailDTO(characterDetailEntity: characterDetailEntity)
+                let characterDetailDTO = CharacterDetail(characterDetailEntity: characterDetailEntity)
                 completion(characterDetailDTO, nil)
             } else {
                 // Data retrieved can't be processed
